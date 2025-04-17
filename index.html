@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ظل الوحدة</title>
+  <title>★彡 ظل الوِحدَة 彡★</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -163,11 +163,11 @@
   
    
     <div class="feedback-form">
-      <h2>📩 Send your comment / 📩 أرسل تعليقك</h2>
+      <h2>Send your comment 📩 </h2>
       <form id="contact-form">
         <input type="text" name="name" placeholder="name / اسمك" required>
         <textarea name="message" placeholder="Write your comment / اكتب تعليقك" required></textarea>
-        <button type="submit">إرسال</button>
+        <button type="submit">send</button>
       </form>
     </div>
 
@@ -178,9 +178,9 @@
       e.preventDefault();
       emailjs.sendForm("service_wx0hb2v", "template_0umaq5m", this)
         .then(() => {
-          alert("✅ تم إرسال تعليقك بنجاح!");
+          alert(" Your comment has been submitted successfully! ✅");
         }, (error) => {
-          alert("❌ حدث خطأ أثناء الإرسال: " + JSON.stringify(error));
+          alert(" An error occurred while sending: ❌" + JSON.stringify(error));
         });
       this.reset();
     });
