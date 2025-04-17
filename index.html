@@ -1,157 +1,162 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ظل الوحدة</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: white;
-            margin: 0;
-            padding: 0;
-            height: auto;
-            overflow: auto;
-            user-select: none;
-            background-image: url("https://nezar2004.github.io/My_book/photo_%D9%A2%D9%A0%D9%A2%D9%A5-%D9%A0%D9%A2-%D9%A2%D9%A6_%D9%A1%D9%A5-%D9%A5%D9%A9-%D9%A3%D9%A8.jpg");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ظل الوحدة</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+      margin: 0;
+      padding: 0;
+      height: auto;
+      overflow: auto;
+      user-select: none;
+      background-image: url("https://nezar2004.github.io/My_book/photo_%D9%A2%D9%A0%D9%A2%D9%A5-%D9%A0%D9%A2-%D9%A2%D9%A6_%D9%A1%D9%A5-%D9%A5%D9%A9-%D9%A3%D9%A8.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333333;
-        }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
 
-        li {
-            float: left;
-        }
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
 
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 16px;
-            text-decoration: none;
-        }
+    .social-icons a img {
+      width: 24px;
+      height: 24px;
+    }
 
-        li a:hover {
-            background-color: #111111;
-        }
+    .feedback-text {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
 
-        li img {
-            width: 24px;
-            height: 24px;
-        }
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-        @media (max-width: 600px) {
-            li {
-                float: none;
-            }
+      .feedback-text {
+        order: -1;
+      }
+    }
 
-            li a {
-                text-align: center;
-                padding: 12px;
-                font-size: 16px;
-            }
-        }
+    h1 {
+      color: cyan;
+      margin-top: 30px;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
 
-        h1 {
-            color: cyan;
-            margin-top: 30px;
-        }
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+    }
 
-        .content {
-            position: relative;
-            z-index: 1;
-            padding: 20px;
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-        }
+    .chapter {
+      margin: 15px 0;
+      padding: 10px;
+      border: 1px solid white;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.2);
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
 
-        .chapter {
-            margin: 15px 0;
-            padding: 10px;
-            border: 1px solid white;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.2);
-        }
+    .chapter a {
+      color: #00ffff;
+      text-decoration: none;
+      font-size: 18px;
+    }
 
-        .chapter a {
-            color: #00ffff;
-            text-decoration: none;
-            font-size: 18px;
-        }
+    .chapter a:hover {
+      color: #ffcc00;
+      text-decoration: underline;
+    }
 
-        .chapter a:hover {
-            color: #ffcc00;
-            text-decoration: underline;
-        }
-    </style>
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+  </style>
 </head>
 <body>
 
-    <ul>
-        <li><a href="https://www.instagram.com/n____1____b/"><img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram"></a></li>
-        <li><a href="https://www.instagram.com/n____1____b/"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook"></a></li>
-    </ul>
-
-    <h1>فصول الكتاب</h1>
-    <div class="content">
-        <div class="chapter">
-            <a href="https://nezar2004.github.io/My_book/المقدمه.html"><strong>المقدمة</strong></a>
-        </div>
-        <div class="chapter">
-            <a href="https://nezar2004.github.io/My_book/الفصل%20الاول.html"><strong>الفصل الأول: حين بدأ كل شيء ينهار</strong></a>
-        </div>
-        <div class="chapter">
-            <a href="https://nezar2004.github.io/My_book/الفصل%20الثاني.html"><strong>الفصل الثاني: وحشة الليل والصمت القاتل</strong></a>
-        </div>
-        <div class="chapter">
-            <a href="https://nezar2004.github.io/My_book/الفصل%20الثالث.html"><strong>الفصل الثالث: أطلال الحب المفقود</strong></a>
-        </div>
-        <div class="chapter">
-            <a href="https://nezar2004.github.io/My_book/الفصل%20الرابع.html"><strong>الفصل الرابع: عاصفة الاضطرابات النفسية</strong></a>
-        </div>
-        <div class="chapter">
-            <a href="https://nezar2004.github.io/My_book/الفصل%20الخامس.html"><strong>الفصل الخامس: حين يبتلع الظلام كل شيء</strong></a>
-        </div>
-        <div class="chapter">
-            <a href="https://nezar2004.github.io/My_book/الفصل%20السادس.html"><strong>الفصل السادس: الطريق إلى الخلاص</strong></a>
-        </div>
-        <div class="chapter">
-            <a href="https://nezar2004.github.io/My_book/الفصل%20السابع.html"><strong>الفصل السابع: الفقد المتكرر.. جرح لا يندمل</strong></a>
-        </div>
-        <div class="chapter">
-            <a href="https://nezar2004.github.io/My_book/الفصل%20الثامن.html"><strong>الفصل الثامن: السقوط الأخير.. لا طريق للعودة؟</strong></a>
-        </div>
-        <div class="chapter">
-            <a href="https://nezar2004.github.io/My_book/الفصل%20التاسع.html"><strong>الفصل التاسع: العزلة الأبدية أم استسلام الروح؟</strong></a>
-        </div>
-        <div class="chapter">
-            <a href="https://nezar2004.github.io/My_book/الفصل%20العاشر.html"><strong>الفصل العاشر: حين يشرق الوعي من جديد</strong></a>
-        </div>
+  
+  <div class="navbar">
+ 
+    <div class="social-icons">
+      <a href="https://www.instagram.com/n____1____b/">
+        <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/N.1.B.N.1.B">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
+      </a>
     </div>
 
-    <script>
-        let scrollSpeed = 100;
+   
+    <div class="feedback-text">رأيكم يهمني ❤️</div>
 
-        window.addEventListener("wheel", (e) => {
-            if (e.deltaY > 0) {
-                window.scrollBy(0, scrollSpeed);
-            } else {
-                window.scrollBy(0, -scrollSpeed);
-            }
-            e.preventDefault();
-        }, { passive: false });
-    </script>
+    
+    <div class="social-icons">
+      <a href="https://www.instagram.com/n____1____b/">
+        <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/N.1.B.N.1.B">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
+      </a>
+    </div>
+  </div>
+
+  <h1>فصول الكتاب</h1>
+
+  <div class="content">
+    <div class="chapter"><a href="https://nezar2004.github.io/My_book/المقدمه.html"><strong>المقدمة</strong></a></div>
+    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الاول.html"><strong>الفصل الأول: حين بدأ كل شيء ينهار</strong></a></div>
+    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الثاني.html"><strong>الفصل الثاني: وحشة الليل والصمت القاتل</strong></a></div>
+    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الثالث.html"><strong>الفصل الثالث: أطلال الحب المفقود</strong></a></div>
+    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الرابع.html"><strong>الفصل الرابع: عاصفة الاضطرابات النفسية</strong></a></div>
+    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الخامس.html"><strong>الفصل الخامس: حين يبتلع الظلام كل شيء</strong></a></div>
+    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20السادس.html"><strong>الفصل السادس: الطريق إلى الخلاص</strong></a></div>
+    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20السابع.html"><strong>الفصل السابع: الفقد المتكرر.. جرح لا يندمل</strong></a></div>
+    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الثامن.html"><strong>الفصل الثامن: السقوط الأخير.. لا طريق للعودة؟</strong></a></div>
+    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20التاسع.html"><strong>الفصل التاسع: العزلة الأبدية أم استسلام الروح؟</strong></a></div>
+    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20العاشر.html"><strong>الفصل العاشر: حين يشرق الوعي من جديد</strong></a></div>
+  </div>
+
+  <script>
+    let scrollSpeed = 100;
+    window.addEventListener("wheel", (e) => {
+      if (e.deltaY > 0) {
+        window.scrollBy(0, scrollSpeed);
+      } else {
+        window.scrollBy(0, -scrollSpeed);
+      }
+      e.preventDefault();
+    }, { passive: false });
+  </script>
 
 </body>
 </html>
