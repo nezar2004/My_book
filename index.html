@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>★彡 ظل الوِحدَة 彡★</title>
-  
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -112,7 +112,6 @@
     @keyframes fadeIn {
       to { opacity: 1; }
     }
-
   </style>
 
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
@@ -133,9 +132,6 @@
       <a href="https://www.facebook.com/N.1.B.N.1.B" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
       </a>
-     <!-- <a href="https://www.snapchat.com/add/your_snap_username" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/733/733614.png" alt="Snapchat">
-      </a>-->
     </div>
 
     <div class="feedback-text">❤️ رأيكم يهمني ❤️</div>
@@ -146,13 +142,9 @@
       </a>
       <a href="https://www.facebook.com/N.1.B.N.1.B" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
-    <!--  </a>
-      <a href="https://www.snapchat.com/add/your_snap_username" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/733/733614.png" alt="Snapchat">
-      </a>-->
+      </a>
     </div>
   </div>
-
 
   <h1>فصول الكتاب</h1>
 
@@ -168,17 +160,15 @@
     <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الثامن.html"><strong>الفصل الثامن: السقوط الأخير.. لا طريق للعودة؟</strong></a></div>
     <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20التاسع.html"><strong>الفصل التاسع: العزلة الأبدية أم استسلام الروح؟</strong></a></div>
     <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20العاشر.html"><strong>الفصل العاشر: حين يشرق الوعي من جديد</strong></a></div>
-  
-   
+
     <div class="feedback-form">
-      <h2>Send your comment 📩 </h2>
+      <h2>Send your comment 📩</h2>
       <form id="contact-form">
         <input type="text" name="name" placeholder="name / اسمك" required>
         <textarea name="message" placeholder="Write your comment / اكتب تعليقك" required></textarea>
         <button type="submit">send</button>
       </form>
     </div>
-
   </div>
 
   <script>
@@ -186,9 +176,9 @@
       e.preventDefault();
       emailjs.sendForm("service_wx0hb2v", "template_0umaq5m", this)
         .then(() => {
-          alert(" Your comment has been submitted successfully! ✅");
+          alert("Your comment has been submitted successfully! ✅");
         }, (error) => {
-          alert(" An error occurred while sending: ❌" + JSON.stringify(error));
+          alert("An error occurred while sending: ❌ " + JSON.stringify(error));
         });
       this.reset();
     });
