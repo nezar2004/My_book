@@ -1,116 +1,359 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>★彡 ظل الوِحدَة 彡★</title>
+
   <link rel="icon" href="https://i.pinimg.com/736x/06/c5/be/06c5be7368c29ffd12131d9ae5c47c0a.jpg" type="image/jpg">
+
   <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      color: white;
       margin: 0;
-      padding: 0;
-      height: auto;
-      overflow: auto;
-      user-select: none;
-      background-image: url("https://nezar2004.github.io/My_book/photo_%D9%A2%D9%A0%D9%A2%D9%A5-%D9%A0%D9%A2-%D9%A2%D9%A6_%D9%A1%D9%A5-%D9%A5%D9%A9-%D9%A3%D9%A8.jpg");
+      min-height: 100vh;
+      font-family: "Tahoma", Arial, sans-serif;
+      color: #fff;
+      background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
+        url("https://nezar2004.github.io/My_book/photo_%D9%A2%D9%A0%D9%A2%D9%A5-%D9%A0%D9%A2-%D9%A2%D9%A6_%D9%A1%D9%A5-%D9%A5%D9%A9-%D9%A3%D9%A8.jpg");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      overflow-x: hidden;
+      user-select: none;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+      padding-bottom: 40px;
     }
 
     .navbar {
+      width: min(1100px, 92%);
+      margin: 18px auto 0;
+      padding: 14px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 10px 20px;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 2;
+      gap: 12px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 22px;
+      background: rgba(10, 10, 18, .55);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 60px rgba(0,0,0,.45);
+    }
+
+    .logo-text {
+      font-weight: 900;
+      font-size: 18px;
+      color: #00f5ff;
+      text-shadow: 0 0 16px rgba(0,245,255,.7);
+      white-space: nowrap;
     }
 
     .social-icons {
       display: flex;
       gap: 10px;
+      align-items: center;
     }
 
-    .social-icons a img {
-      width: 24px;
-      height: 24px;
+    .social-icons a {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      transition: .3s;
     }
 
-    .feedback-text {
-      color: white;
-      font-size: 18px;
+    .social-icons a:hover {
+      transform: translateY(-4px) scale(1.08);
+      box-shadow: 0 0 22px rgba(0,245,255,.55);
+    }
+
+    .social-icons img {
+      width: 22px;
+      height: 22px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .hero {
+      width: min(1050px, 92%);
+      margin: 55px auto 25px;
+      text-align: center;
+      padding: 45px 22px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(0,255,255,.14), rgba(255,255,255,.06));
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: 0 25px 80px rgba(0,0,0,.55);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      background: #00f5ff;
+      filter: blur(110px);
+      opacity: .35;
+      top: -80px;
+      right: -80px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      background: #ffcc00;
+      filter: blur(120px);
+      opacity: .22;
+      bottom: -90px;
+      left: -90px;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(0,245,255,.13);
+      color: #8ffcff;
+      border: 1px solid rgba(0,245,255,.35);
       font-weight: bold;
+      margin-bottom: 18px;
     }
 
     h1 {
-      color: cyan;
-      margin-top: 30px;
-      opacity: 0;
-      animation: fadeIn 2s forwards;
+      margin: 0;
+      font-size: clamp(34px, 7vw, 72px);
+      color: #fff;
+      line-height: 1.25;
+      text-shadow: 0 0 28px rgba(0,245,255,.75);
+    }
+
+    .subtitle {
+      width: min(650px, 100%);
+      margin: 18px auto 0;
+      color: #ddd;
+      font-size: clamp(15px, 3vw, 19px);
+      line-height: 1.9;
     }
 
     .content {
-      position: relative;
-      z-index: 1;
-      padding: 20px;
-      max-width: 800px;
-      margin: 50px auto;
-      background-color: rgba(0, 0, 0, 0.7);
-      border-radius: 10px;
+      width: min(950px, 92%);
+      margin: 30px auto;
+      padding: 24px;
+      border-radius: 30px;
+      background: rgba(8, 8, 15, .72);
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 25px 80px rgba(0,0,0,.5);
+      backdrop-filter: blur(14px);
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 0 0 24px;
+      color: #00f5ff;
+      font-size: 30px;
+      text-shadow: 0 0 20px rgba(0,245,255,.7);
+    }
+
+    .chapters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
 
     .chapter {
-      margin: 15px 0;
-      padding: 10px;
-      border: 1px solid white;
-      border-radius: 5px;
-      background-color: rgba(255, 255, 255, 0.2);
-      opacity: 0;
-      animation: fadeIn 2s forwards;
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.16);
+      transition: .35s;
+    }
+
+    .chapter::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(0,245,255,.16), transparent);
+      transform: translateX(100%);
+      transition: .6s;
+    }
+
+    .chapter:hover::before {
+      transform: translateX(-100%);
+    }
+
+    .chapter:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0,245,255,.55);
+      box-shadow: 0 16px 35px rgba(0,245,255,.18);
     }
 
     .chapter a {
-      color: #00ffff;
+      position: relative;
+      z-index: 1;
+      display: block;
+      padding: 20px;
+      color: #fff;
       text-decoration: none;
       font-size: 18px;
+      line-height: 1.7;
+      font-weight: bold;
     }
 
-    .chapter a:hover {
-      color: #ffcc00;
-      text-decoration: underline;
+    .chapter span {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      margin-left: 8px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: rgba(0,245,255,.16);
+      color: #00f5ff;
+      box-shadow: 0 0 18px rgba(0,245,255,.35);
     }
 
     .feedback-form {
-      margin-top: 30px;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
+      margin-top: 28px;
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      text-align: center;
+    }
+
+    .feedback-form h2 {
+      margin-top: 0;
+      color: #ffcc00;
+      font-size: 26px;
     }
 
     input, textarea, button {
-      width: 90%;
+      width: 100%;
       margin: 10px 0;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
+      padding: 15px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.15);
+      outline: none;
       font-size: 16px;
+      font-family: inherit;
+    }
+
+    input, textarea {
+      color: #fff;
+      background: rgba(0,0,0,.35);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #bbb;
     }
 
     button {
-      background-color: #00ffff;
-      color: black;
-      font-weight: bold;
+      border: none;
+      color: #001315;
+      font-weight: 900;
       cursor: pointer;
+      background: linear-gradient(135deg, #00f5ff, #ffcc00);
+      box-shadow: 0 12px 30px rgba(0,245,255,.25);
+      transition: .3s;
     }
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 45px rgba(0,245,255,.38);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      .navbar {
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 18px;
+        flex-direction: column;
+      }
+
+      .logo-text {
+        font-size: 16px;
+        order: -1;
+      }
+
+      .hero {
+        margin-top: 25px;
+        padding: 35px 16px;
+        border-radius: 24px;
+      }
+
+      .content {
+        padding: 16px;
+        border-radius: 24px;
+      }
+
+      .chapters {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .chapter a {
+        font-size: 16px;
+        padding: 17px;
+      }
+
+      .section-title {
+        font-size: 25px;
+      }
+
+      .feedback-form {
+        padding: 18px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .social-icons a {
+        width: 34px;
+        height: 34px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+      }
+
+      .chapter a {
+        font-size: 15px;
+      }
     }
   </style>
 
@@ -120,71 +363,86 @@
       emailjs.init("jxKV45bZn-PmfU9JO");
     })();
   </script>
-
 </head>
+
 <body>
+  <main class="page">
 
-  <div class="navbar">
-    <div class="social-icons">
-      <a href="https://www.instagram.com/n____1____b/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/N.1.B.N.1.B" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
-      </a>
-      <a href="https://www.snapchat.com/add/nezarahmad55?share_id=5E-plotCgfI&locale=ar-EG" target="_blank">
-        <img src="https://img.utdstc.com/icon/f34/805/f34805cdd3d43b7ab36b39621fc47de11263f0f53c3460f9186ba293f2696cef:200" alt="Snapchat">
-      </a>
-    </div>
+    <nav class="navbar">
+      <div class="social-icons">
+        <a href="https://www.instagram.com/n____1____b/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/N.1.B.N.1.B" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
+        </a>
+        <a href="https://www.snapchat.com/add/nezarahmad55?share_id=5E-plotCgfI&locale=ar-EG" target="_blank">
+          <img src="https://img.utdstc.com/icon/f34/805/f34805cdd3d43b7ab36b39621fc47de11263f0f53c3460f9186ba293f2696cef:200" alt="Snapchat">
+        </a>
+      </div>
 
-    <div class="feedback-text">❤️ رأيكم يهمني ❤️</div>
+      <div class="logo-text">❤️ رأيكم يهمني ❤️</div>
 
-    <div class="social-icons">
-      <a href="https://www.instagram.com/n____1____b/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/N.1.B.N.1.B" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
-      </a>
-      <a href="https://www.snapchat.com/add/nezarahmad55?share_id=5E-plotCgfI&locale=ar-EG" target="_blank" rel="noopener noreferrer">
-		<img src="https://img.utdstc.com/icon/f34/805/f34805cdd3d43b7ab36b39621fc47de11263f0f53c3460f9186ba293f2696cef:200" alt="Snapchat">
-	</a>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/n____1____b/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/N.1.B.N.1.B" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
+        </a>
+        <a href="https://www.snapchat.com/add/nezarahmad55?share_id=5E-plotCgfI&locale=ar-EG" target="_blank">
+          <img src="https://img.utdstc.com/icon/f34/805/f34805cdd3d43b7ab36b39621fc47de11263f0f53c3460f9186ba293f2696cef:200" alt="Snapchat">
+        </a>
+      </div>
+    </nav>
 
-    </div>
-  </div>
+    <section class="hero">
+      <div class="badge">رواية عربية</div>
+      <h1>ظل الوِحدَة</h1>
+      <p class="subtitle">
+        رحلة بين الصمت، الألم، الذكريات، والانهيار الداخلي...
+        اقرأ الفصول واكتشف الطريق من الظلام إلى الخلاص.
+      </p>
+    </section>
 
-  <h1>فصول الكتاب</h1>
+    <section class="content">
+      <h2 class="section-title">فصول الكتاب</h2>
 
-  <div class="content">
-    <div class="chapter"><a href="https://nezar2004.github.io/My_book/المقدمه.html"><strong>المقدمة</strong></a></div>
-    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الاول.html"><strong>الفصل الأول: حين بدأ كل شيء ينهار</strong></a></div>
-    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الثاني.html"><strong>الفصل الثاني: وحشة الليل والصمت القاتل</strong></a></div>
-    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الثالث.html"><strong>الفصل الثالث: أطلال الحب المفقود</strong></a></div>
-    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الرابع.html"><strong>الفصل الرابع: عاصفة الاضطرابات النفسية</strong></a></div>
-    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الخامس.html"><strong>الفصل الخامس: حين يبتلع الظلام كل شيء</strong></a></div>
-    <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20السادس.html"><strong>الفصل السادس: الطريق إلى الخلاص</strong></a></div>
-    <div class="feedback-form">
-      <h2>Send your comment 📩</h2>
-      <form id="contact-form">
-        <input type="text" name="name" placeholder="name / اسمك" required>
-        <textarea name="message" placeholder="Write your comment / اكتب تعليقك" required></textarea>
-        <button type="submit">send</button>
-      </form>
-    </div>
-  </div>
+      <div class="chapters">
+        <div class="chapter"><a href="https://nezar2004.github.io/My_book/المقدمه.html"><span>✦</span>المقدمة</a></div>
+        <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الاول.html"><span>1</span>الفصل الأول: حين بدأ كل شيء ينهار</a></div>
+        <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الثاني.html"><span>2</span>الفصل الثاني: وحشة الليل والصمت القاتل</a></div>
+        <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الثالث.html"><span>3</span>الفصل الثالث: أطلال الحب المفقود</a></div>
+        <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الرابع.html"><span>4</span>الفصل الرابع: عاصفة الاضطرابات النفسية</a></div>
+        <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20الخامس.html"><span>5</span>الفصل الخامس: حين يبتلع الظلام كل شيء</a></div>
+        <div class="chapter"><a href="https://nezar2004.github.io/My_book/الفصل%20السادس.html"><span>6</span>الفصل السادس: الطريق إلى الخلاص</a></div>
+      </div>
+
+      <div class="feedback-form">
+        <h2>اترك تعليقك 📩</h2>
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="اسمك" required>
+          <textarea name="message" placeholder="اكتب رأيك أو تعليقك هنا..." required></textarea>
+          <button type="submit">إرسال التعليق</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
 
   <script>
     document.getElementById("contact-form").addEventListener("submit", function(e) {
       e.preventDefault();
+
       emailjs.sendForm("service_wx0hb2v", "template_0umaq5m", this)
         .then(() => {
-          alert("Your comment has been submitted successfully! ✅");
+          alert("تم إرسال تعليقك بنجاح ✅");
         }, (error) => {
-          alert("An error occurred while sending: ❌ " + JSON.stringify(error));
+          alert("حدث خطأ أثناء الإرسال ❌ " + JSON.stringify(error));
         });
+
       this.reset();
     });
   </script>
-
 </body>
 </html>
