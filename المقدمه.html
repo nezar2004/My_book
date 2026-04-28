@@ -1,90 +1,226 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="رواية ظل الوحدة: رحلة نفسية عميقة داخل دهاليز الألم والأمل.">
-    <title>المقدمة</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="رواية ظل الوحدة: رحلة نفسية عميقة داخل دهاليز الألم والأمل." />
+  <title>المقدمة | ظل الوحدة</title>
 
-        body {
-            font-family: 'Cairo', Arial, sans-serif;
-            text-align: center;
-            color: white; 
-            margin: 0;
-            padding: 0;
-            background: url("photo_٢٠٢٥-٠٢-٢٦_١٥-٥٩-٣٨.jpg") no-repeat center fixed;
-            background-size: cover;
-        }
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
 
-        .content {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            line-height: 2;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .content h1 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .content p {
-            font-weight: bold;
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Cairo', Arial, sans-serif;
+      color: #fff;
+      background:
+        linear-gradient(rgba(0, 0, 0, .68), rgba(0, 0, 0, .9)),
+        url("photo_٢٠٢٥-٠٢-٢٦_١٥-٥٩-٣٨.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0 auto 30px;
-            text-align: center;  /* النص في وسط السطر */
-        }
+    .page {
+      width: min(900px, 92%);
+      margin: 0 auto;
+      padding: 35px 0;
+    }
 
-        ul li {
-            margin: 8px 0;
-            font-size: 17px;
-        }
+    .content {
+      position: relative;
+      overflow: hidden;
+      padding: 35px;
+      border-radius: 30px;
+      background: rgba(8, 8, 15, .78);
+      border: 1px solid rgba(255, 255, 255, .15);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, .6);
+      backdrop-filter: blur(14px);
+      line-height: 2.15;
+      text-align: center;
+    }
 
-        a {
-            color: orange;
-            font-size: 20px;
-            text-decoration: none;
-        }
+    .content::before {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      top: -100px;
+      right: -100px;
+      background: #00f5ff;
+      opacity: .25;
+      filter: blur(110px);
+    }
 
-        a:hover {
-            color: red;
-        }
+    .content::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      bottom: -110px;
+      left: -110px;
+      background: #ffcc00;
+      opacity: .18;
+      filter: blur(120px);
+    }
 
-        @media (max-width: 600px) {
-            .content {
-                width: 90%;
-                padding: 15px;
-            }
+    .content > * {
+      position: relative;
+      z-index: 1;
+    }
 
-            .content h1 {
-                font-size: 26px;
-            }
+    .badge {
+      display: inline-block;
+      padding: 8px 18px;
+      margin-bottom: 15px;
+      border-radius: 999px;
+      color: #8ffcff;
+      background: rgba(0, 245, 255, .12);
+      border: 1px solid rgba(0, 245, 255, .35);
+      font-weight: 700;
+    }
 
-            .content p, ul li {
-                font-size: 16px;
-            }
+    h1 {
+      margin: 0 0 22px;
+      font-size: clamp(36px, 7vw, 62px);
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 0 0 28px rgba(0, 245, 255, .75);
+    }
 
-            a {
-                font-size: 18px;
-            }
-        }
-    </style>
+    p {
+      margin: 0 auto 26px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #eee;
+      max-width: 760px;
+    }
+
+    .chapters-box {
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .14);
+    }
+
+    .chapters-title {
+      margin: 0 0 15px;
+      color: #00f5ff;
+      font-size: 24px;
+      text-shadow: 0 0 18px rgba(0, 245, 255, .55);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    ul li {
+      padding: 14px 16px;
+      border-radius: 18px;
+      font-size: 17px;
+      font-weight: 700;
+      background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.13);
+      transition: .3s;
+    }
+
+    ul li:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 245, 255, .5);
+      box-shadow: 0 12px 28px rgba(0, 245, 255, .18);
+    }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      color: #001315;
+      font-size: 18px;
+      font-weight: 900;
+      text-decoration: none;
+      background: linear-gradient(135deg, #00f5ff, #ffcc00);
+      box-shadow: 0 12px 30px rgba(0, 245, 255, .25);
+      transition: .3s;
+    }
+
+    .home-link:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(0, 245, 255, .4);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      .page {
+        width: 94%;
+        padding: 18px 0;
+      }
+
+      .content {
+        padding: 24px 16px;
+        border-radius: 24px;
+        line-height: 2;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      ul li {
+        font-size: 15px;
+        padding: 13px;
+      }
+
+      .home-link {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px 18px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .content {
+        padding: 22px 14px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .chapters-title {
+        font-size: 21px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="content">
-    <h1>المقدمة</h1>
-    <p>
+  <main class="page">
+    <section class="content">
+      <div class="badge">رواية ظل الوحدة</div>
+
+      <h1>المقدمة</h1>
+
+      <p>
         في عالمٍ تتلاطم فيه أمواج الوحدة والضياع، حيث يصبح الصمت ظلًا ثقيلًا، والخوف رفيقًا لا يفارق، تبدأ رحلة البطل في مواجهة أعماقه.
         بين أشباح الماضي وجراح الحاضر، بين أسئلة بلا إجابات وألم لا يهدأ، يخوض صراعًا يائسًا ضد العزلة التي تطوق روحه.
         لكن وسط العتمة، يتراقص شعاع خافت من الأمل، يدعوه للسير رغم ثقل الخطى.
@@ -92,25 +228,29 @@
         <br><br>
         "ظل الوحدة" ليست مجرد رواية، بل مرآة تعكس أعمق زوايا النفس البشرية، حيث تتجلى هشاشتها وقوتها في آنٍ واحد.
         هي قصة عن السقوط والنهوض، عن الألم الذي يوقظ، وعن البحث الحثيث عن نور قد يكون أقرب مما نتصور، لكننا لا نراه وسط العواصف النفسية.
-    </p>
+      </p>
 
-    <ul>
-        <li>حين بدأ كل شيء ينهار – الفصل الأول</li>
-        <li>وحشة الليل والصمت القاتل – الفصل الثاني</li>
-        <li>أطلال الحب المفقود – الفصل الثالث</li>
-        <li>عاصفة الاضطرابات النفسية – الفصل الرابع</li>
-        <li>حين يبتلع الظلام كل شيء – الفصل الخامس</li>
-        <li>الطريق إلى الخلاص – الفصل السادس</li>
+      <div class="chapters-box">
+        <h2 class="chapters-title">فصول الرواية</h2>
 
-    </ul>
+        <ul>
+          <li>حين بدأ كل شيء ينهار – الفصل الأول</li>
+          <li>وحشة الليل والصمت القاتل – الفصل الثاني</li>
+          <li>أطلال الحب المفقود – الفصل الثالث</li>
+          <li>عاصفة الاضطرابات النفسية – الفصل الرابع</li>
+          <li>حين يبتلع الظلام كل شيء – الفصل الخامس</li>
+          <li>الطريق إلى الخلاص – الفصل السادس</li>
+        </ul>
+      </div>
 
-    <p>
+      <p>
         هذه الرواية ليست مجرد قصة، بل رحلة داخل دهاليز النفس، حيث تنبعث القوة من الهشاشة، ويتحول الألم إلى بداية جديدة.
         فهل سينجح البطل في كسر قيده والخروج من ظلال الوحدة؟
-    </p>
+      </p>
 
-    <a href="https://nezar2004.github.io/My_book/">العودة إلى الصفحة الرئيسية</a>
-</div>
+      <a class="home-link" href="https://nezar2004.github.io/My_book/">العودة إلى الصفحة الرئيسية</a>
+    </section>
+  </main>
 
 </body>
 </html>
